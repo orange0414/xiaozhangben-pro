@@ -1,0 +1,19 @@
+小账本 Pro — 免费的 iPhone/iPad 桌面记账 App (PWA)
+
+重要：ZIP 里的 index.html 直接在文件 App 中打开，不等于安装好 PWA。
+必须把文件上传到 HTTPS 网站（如 GitHub Pages），再用 Safari 访问网址。
+
+【免费发布到 GitHub Pages】
+1. 在 github.com 注册/登录账号，建立 Public repository，例如 xiaozhangben（公共仓库注意不要上传个人账单！源代码不包含账单）。
+2. 将这个文件夹内的 index.html、app.js、sw.js、manifest.webmanifest 以及整个 icons 文件夹上传到仓库根目录。不要上传 zip 当网站。
+3. 仓库 Settings → Pages → Build and deployment → Deploy from a branch → main / (root) → Save。
+4. 等待部署完成，访问 https://你的用户名.github.io/xiaozhangben/ （以 GitHub Pages 实际给出的 URL 为准）。
+5. 用 iPhone/iPad Safari 打开网址，分享 → 添加到主屏幕 → 添加（部分系统还需开启“作为网页 App 打开”）。
+6. 点击桌面图标使用。首次联网加载后，支持离线打开。
+
+【重要提醒】
+- iPad 和 iPhone 数据各自本地存储，不自动同步。迁移时先从旧设备“管理→导出 JSON 备份”，再用新设备“管理→导入 JSON 备份”。
+- 卸载或清除 Safari 网站数据，可能导致记录丢失；请定期备份。
+- 此 PWA 无需付费 Apple 开发者账户，不能作为原生 ipa 安装。
+- 之前 Swift Playgrounds 原生版使用不同的本地存储方式，本 PWA 无法直接读取该原生版数据。如需迁移，需另行转换原生版的导出 CSV。
+- 开发者不能看到你的记账数据；不要把 JSON/CSV 备份上传到公开代码仓库。
